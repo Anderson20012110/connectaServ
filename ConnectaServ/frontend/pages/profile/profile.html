@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links Css -->
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="/frontend/components/global.css">
+    <link rel="stylesheet" href="/frontend/components/navBar.css">
+    <link rel="stylesheet" href="/frontend/components/footer.css">
+
+    <!-- Links Js -->
+    <!-- <script src="./profile.js" defer></script> -->
+
+    <!-- CDN font-awesome e Google Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Perfil</title>
+
+</head>
+
+<body>
+    <section class="container">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-container"> <img src="/frontend/assets/img/image.png" alt="Logo"></div>
+
+                <div class="nav-links">
+                    <a href="#" class="nav-link">Encontrar Serviços</a>
+
+                    <div class="nav-icons">
+                        <a href="#"><i class="fa-regular fa-comment-dots"></i><span class="badge"></span></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-regular fa-bell"></i><span class="badge"></span></a>
+                    </div>
+
+                    <div class="nav-auth">
+                        <a href="#" class="btn-text">Entrar</a>
+                        <a href="#" class="btn-solid">Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="box profile-page">
+            <section class="profile-header-card">
+                <div class="profile-banner"></div>
+                <div class="profile-main-info">
+                    <div class="avatar-container">
+                        <div class="avatar">
+                            <i class="fa-solid fa-user"></i>
+                            <div class="verified-badge"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </div>
+                    <div class="info-actions-row">
+                        <div class="text-info">
+                            <div class="name-rating">
+                                <h1>Carlos Ferreira</h1>
+                                <span class="star-badge"><i class="fa-solid fa-star"></i> 4.9</span>
+                            </div>
+                            <p class="job-title">Encanador Especialista</p>
+                            <div class="meta-info">
+                                <span><i class="fa-solid fa-location-dot"></i> São Paulo, SP (1.2 km)</span>
+                                <span><i class="fa-regular fa-calendar"></i> Na plataforma desde 2021</span>
+                                <span><i class="fa-regular fa-comment"></i> 124 avaliações</span>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn-outline"><i class="fa-regular fa-comment-dots"></i> Mensagem</button>
+                            <button class="btn-primary">Contratar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <nav class="profile-tabs">
+                <button class="tab-item active">Sobre</button>
+                <button class="tab-item">Portfólio</button>
+                <button class="tab-item">Avaliações</button>
+            </nav>
+
+            <div class="profile-content-grid">
+                <section class="main-content">
+                    <div class="content-card">
+                        <h2>Sobre mim</h2>
+                        <p class="bio-text">
+                            Sou encanador profissional há mais de 15 anos, especializado em manutenções preventivas,
+                            detecção de vazamentos e instalações hidráulicas em geral. Garanto um serviço limpo, rápido
+                            e com garantia de qualidade. Atendo residências e comércios na região central e zona sul.
+                        </p>
+
+                        <div class="section-divider"></div>
+
+                        <h3 class="section-title"><i class="fa-solid fa-shield-halved"></i> Certificados e Cursos</h3>
+
+                        <div class="cert-list">
+                            <div class="cert-item">
+                                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                                <div class="cert-info">
+                                    <h4>Curso Técnico em Hidráulica - SENAI</h4>
+                                    <p>Concluído em 2010</p>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                                <div class="cert-info">
+                                    <h4>Especialização em Caça-Vazamentos</h4>
+                                    <p>Concluído em 2018</p>
+                                </div>
+                            </div>
+                            <div class="cert-item">
+                                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                                <div class="cert-info">
+                                    <h4>NR-35 Trabalho em Altura</h4>
+                                    <p>Concluído em 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="sidebar">
+                    <div class="price-card">
+                        <h3>Tabela de Preços</h3>
+                        <div class="base-price-box">
+                            <span class="label">Preço base</span>
+                            <span class="value">A partir de R$ 80</span>
+                        </div>
+                        <ul class="price-list">
+                            <li><span>Visita Técnica</span> <strong>R$ 80</strong></li>
+                            <li><span>Troca de Sifão/Torneira</span> <strong>R$ 150</strong></li>
+                            <li><span>Detecção de Vazamento</span> <strong>R$ 250</strong></li>
+                            <li><span>Desentupimento de Pia</span> <strong>R$ 180</strong></li>
+                        </ul>
+                        <button class="btn-budget-request">Solicitar Orçamento</button>
+                        <p class="price-disclaimer">O valor final pode variar após a avaliação no local.</p>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="logo-container">
+                        <img src="/frontend/assets/img/image.png" alt="Logo">
+                    </div>
+                    <p>Promovendo a inclusão digital para pequenos negócios e autônomos. Conectando quem precisa com
+                        quem
+                        sabe fazer.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Para Clientes</h4>
+                    <ul>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Buscar profissionais</a></li>
+                        <li><a href="#">Cadastrar-se</a></li>
+                        <li><a href="#">Central de Ajuda</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Para Profissionais</h4>
+                    <ul>
+                        <li><a href="#">Seja um prestador</a></li>
+                        <li><a href="#">Painel do Profissional</a></li>
+                        <li><a href="#">Planos e Preços</a></li>
+                        <li><a href="#">Dicas de Sucesso</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ConectaServ. Todos os direitos reservados.</p>
+                <p>Feito com <i class="fa-solid fa-heart" style="color: red;"></i> no Brasil</p>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>

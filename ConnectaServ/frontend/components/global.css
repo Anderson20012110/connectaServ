@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: var(--bg-light);
+}
+
+:root {
+    /* Tons Backgorunds */
+    --bg: #e0e7ff;
+    --bg-white: #ffffff;
+    --bg-light: #fff3ff;
+
+    /* Paleta de cores */
+    --color-blue: #617bfb;
+    --color-purple: #726bfb;
+    --color-green: #466c5a;
+    --color-border: #e5e7eb;
+    --color-primary: #4353ff;
+    --color-primary-hover: #3643d9;
+
+    /* Cor de textos */
+    --text-white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-gray: #6b7280;
+    --text-light: #9ca3af;
+
+    /* Badge & Estrelas */
+    --color-star: #fbbf24;
+    --color-badge-green-bg: #dcfce7;
+
+    /* Badges Status */
+    --color-badge-novo-text: #4f46e5;
+    --color-badge-novo-bg: #dce1fa;
+    --color-badge-andamento-bg: #fef3c7;
+    --color-badge-andamento-text: #d97706;
+    --color-badge-green-bg: #dcfce7;
+    --color-badge-green-text: #16a34a;
+
+
+    --color-alert-red: #ef4444;
+
+
+}

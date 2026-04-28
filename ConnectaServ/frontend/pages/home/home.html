@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links Css -->
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="/frontend/components/global.css">
+    <link rel="stylesheet" href="/frontend/components/navBar.css">
+    <link rel="stylesheet" href="/frontend/components/footer.css">
+
+    <!-- Links Js -->
+    <!-- <script src="./home.js" defer></script> -->
+
+    <!-- CDN font-awesome e Google Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>ConnectaServ</title>
+
+</head>
+
+<body>
+    <section class="container">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-container"> <img src="/frontend/assets/img/image.png" alt="Logo"></div>
+
+                <div class="nav-links">
+                    <a href="#" class="nav-link">Encontrar Serviços</a>
+
+                    <div class="nav-icons">
+                        <a href="#"><i class="fa-regular fa-comment-dots"></i><span class="badge"></span></a>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <a href="#"><i class="fa-regular fa-bell"></i><span class="badge"></span></a>
+                    </div>
+
+                    <div class="nav-auth">
+                        <a href="#" class="btn-text">Entrar</a>
+                        <a href="#" class="btn-solid">Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero-section">
+            <div class="hero-container">
+                <h1>Encontre o profissional certo,<br>perto de você.</h1>
+                <p>Conectamos você aos melhores prestadores de serviço da sua região.<br>Rápido, seguro e sem
+                    complicações.
+                </p>
+
+                <div class="search-bar">
+                    <div class="search-input-group flex-2">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="O que você precisa hoje?">
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-input-group flex-1">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" placeholder="Recife, PE" value="Recife, PE">
+                    </div>
+                    <button class="btn-search">Buscar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="box">
+                <div class="section-header">
+                    <div>
+                        <h2>Categorias Populares</h2>
+                        <p>Navegue pelos serviços mais buscados</p>
+                    </div>
+                    <a href="#" class="view-all">Ver todas <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="cat-icon bg-blue-light">
+                            <i class="fa-solid fa-wrench text-blue"></i>
+                        </div>
+                        <span>Reformas</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon bg-yellow-light">
+                            <i class="fa-solid fa-bolt text-yellow"></i>
+                        </div>
+                        <span>Elétrica</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon bg-pink-light">
+                            <i class="fa-solid fa-scissors text-pink"></i>
+                        </div>
+                        <span>Beleza</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="cat-icon bg-purple-light">
+                            <i class="fa-solid fa-book-open text-purple"></i>
+                        </div>
+                        <span>Aulas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="professionals-section">
+            <div class="box">
+                <div class="section-header">
+                    <div>
+                        <h2>Profissionais perto de você</h2>
+                        <p>Encontre os melhores talentos na sua região</p>
+                    </div>
+                </div>
+
+                <div class="professionals-grid">
+                    <div class="pro-card">
+                        <div class="pro-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Carlos Ferreira">
+                            <span class="badge-destaque">Destaque</span>
+                            <button class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="pro-info">
+                            <div class="pro-header">
+                                <h3>Carlos Ferreira</h3>
+                                <div class="pro-rating"><i class="fa-solid fa-star"></i> 4.9</div>
+                            </div>
+                            <p class="pro-category text-green">Encanador Especialista</p>
+                            <div class="pro-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> 1.2 km</span>
+                                <span class="meta-dot">&bull;</span>
+                                <span>124 avaliações</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pro-card">
+                        <div class="pro-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Maria Oliveira">
+                            <button class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="pro-info">
+                            <div class="pro-header">
+                                <h3>Maria Oliveira</h3>
+                                <div class="pro-rating"><i class="fa-solid fa-star"></i> 4.8</div>
+                            </div>
+                            <p class="pro-category text-green">Faxineira Profissional</p>
+                            <div class="pro-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> 0.8 km</span>
+                                <span class="meta-dot">&bull;</span>
+                                <span>89 avaliações</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pro-card">
+                        <div class="pro-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="João Santos">
+                            <span class="badge-destaque">Destaque</span>
+                            <button class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="pro-info">
+                            <div class="pro-header">
+                                <h3>João Santos</h3>
+                                <div class="pro-rating"><i class="fa-solid fa-star"></i> 4.7</div>
+                            </div>
+                            <p class="pro-category text-green">Eletricista Residencial</p>
+                            <div class="pro-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> 2.1 km</span>
+                                <span class="meta-dot">&bull;</span>
+                                <span>64 avaliações</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pro-card">
+                        <div class="pro-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                                alt="Ana Costa">
+                            <button class="btn-favorite"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="pro-info">
+                            <div class="pro-header">
+                                <h3>Ana Costa</h3>
+                                <div class="pro-rating"><i class="fa-solid fa-star"></i> 5.0</div>
+                            </div>
+                            <p class="pro-category text-green">Pintora Decorativa</p>
+                            <div class="pro-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> 1.5 km</span>
+                                <span class="meta-dot">&bull;</span>
+                                <span>45 avaliações</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="box text-center">
+                <h2>É um profissional autônomo?</h2>
+                <p>Junte-se a milhares de profissionais que estão aumentando sua renda com a ConectaServ. Cadastro 100%
+                    gratuito.</p>
+                <button class="btn-white">Quero oferecer meus serviços</button>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="logo-container">
+                        <img src="/frontend/assets/img/image.png" alt="Logo">
+                    </div>
+                    <p>Promovendo a inclusão digital para pequenos negócios e autônomos. Conectando quem precisa com
+                        quem
+                        sabe fazer.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Para Clientes</h4>
+                    <ul>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Buscar profissionais</a></li>
+                        <li><a href="#">Cadastrar-se</a></li>
+                        <li><a href="#">Central de Ajuda</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Para Profissionais</h4>
+                    <ul>
+                        <li><a href="#">Seja um prestador</a></li>
+                        <li><a href="#">Painel do Profissional</a></li>
+                        <li><a href="#">Planos e Preços</a></li>
+                        <li><a href="#">Dicas de Sucesso</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 ConectaServ. Todos os direitos reservados.</p>
+                <p>Feito com <i class="fa-solid fa-heart" style="color: red;"></i> no Brasil</p>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>
