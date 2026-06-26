@@ -1,0 +1,255 @@
+.container {
+    height: 100dvh;
+    width: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 72px - 250px);
+    min-height: 660px;
+    margin-bottom: -40px;
+}
+
+/* Sidebar Esquerda (Busca e Cards) */
+.sidebar {
+    width: 420px;
+    padding: 1.5rem;
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--bg-white);
+    overflow-y: auto;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.filter-btn {
+    padding: 0.2rem;
+    border-left: 1px solid var(--color-border);
+    padding-left: 0.8rem;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+.sort-btn {
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Cards de Profissionais */
+.pro-card {
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    position: relative;
+    background-color: var(--bg-white);
+    transition: box-shadow 0.2s;
+}
+
+.pro-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--text-light);
+}
+
+.favorite-btn:hover {
+    color: var(--color-alert-red);
+}
+
+.card-info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    object-fit: cover;
+    background-color: var(--bg);
+}
+
+.details h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.profession {
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.meta {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rating {
+    color: var(--color-star);
+    font-weight: 600;
+}
+
+.reviews {
+    color: var(--text-light);
+    font-weight: normal;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    background-color: var(--color-badge-novo-bg);
+    color: var(--color-badge-novo-text);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.price {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.view-profile {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.view-profile:hover {
+    text-decoration: underline;
+}
+
+/* Área do Mapa */
+.map-area {
+    flex: 1;
+    position: relative;
+    background-color: #f8faff;
+    background-image:
+        linear-gradient(var(--bg) 1px, transparent 1px),
+        linear-gradient(90deg, var(--bg) 1px, transparent 1px);
+    background-size: 40px 40px;
+    overflow: hidden;
+}
+
+/* Pinos do Mapa */
+.map-pin {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(114, 107, 251, 0.4);
+    cursor: pointer;
+}
+
+.pin-inner {
+    width: 8px;
+    height: 8px;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+}
+
+.map-pin.active {
+    background-color: var(--color-primary);
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+}
+
+.map-pin.active .pin-pulse {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Controles de Zoom */
+.map-controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.map-controls button {
+    width: 36px;
+    height: 36px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.map-controls button:hover {
+    background-color: var(--bg);
+}

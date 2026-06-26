@@ -1,0 +1,99 @@
+<head>
+    <link rel="stylesheet" href="/styles/sidebar.css">
+    <link rel="stylesheet" href="/styles/favoritos.css">
+
+    <!-- Links Js -->
+    <script type="module" src="/scripts/menuLateral.js" defer></script>  
+    <script src="/scripts/favoritos.js" defer></script>  
+    <script src="/scripts/carregarFavoritos.js" defer></script>  
+    <script src="/scripts/removerFavoritos.js" defer></script>  
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/homeLogado" class="logo-container"> <img src="/img/image.png" alt="Logo"></a>
+
+            <div class="nav-links">
+                <a href="/buscar" class="nav-link">Encontrar Serviços</a>
+
+                <div class="nav-icons">
+                    <a href="/chat"><i class="fa-regular fa-comment-dots"></i><span class="badge"></span></a>
+                    <a id="ativarMenuFavoritos"><i class="fa-regular fa-heart"></i></a>
+                    <a href="/dashboard"><i class="fa-regular fa-bell"></i><span class="badge"></span></a>
+                </div>
+
+                <div class="nav-user">
+                    <h4 id="nomeLogin"><%= usuario.nome %></h4>    
+                    <div class="imgLogin" id="ativarMenu"></div>
+                </div>
+
+                <!-- Menu lateral -->
+                <div id="menuLateral" class="menu-lateral">
+                    <div class="user-profile">
+
+                        <div class="avatar-large">A</div>
+
+                            <div class="user-info">
+                                <h3 id="nomeLoginBarra">Olá, <%= usuario.nome %></h3>
+                                <p><%= usuario.perfil %> </p>
+                           </div>
+                    </div>
+
+                    <div class="sidebar-divider"></div>
+
+                    <div class="sidebar-menu">
+                        <a href="/perfil" class="menu-item active">
+                            <div class="menu-item-left">
+                                 Meu Perfil
+                            </div>
+                        </a>
+
+                        <a href="/chat" class="menu-item">
+                            <div class="menu-item-left" style="display: flex; align-items: center;">
+                                Mensagens
+                                <span class="badge-count" style="margin-left: 0.5rem;">2</span>
+                            </div>
+                        </a>
+
+                        <a href="/cadastroPerfilColaborador" class="menu-item">
+                            <div class="menu-item-left">
+                                Cadastrar meus serviços
+                            </div>
+                        </a>
+
+                        <a href="/dashboard" class="menu-item">
+                            <div class="menu-item-left">
+                                Carteira
+                            </div>
+                        </a>
+
+                        <a href="/logout" class="menu-item">
+                            <div class="menu-item-left">
+                                Sair
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Favoritos Menu lateral -->
+                <div id="menuLateralfavoritos" class="menu-lateral-favoritos">
+                    <div class="user-profile">
+
+                        <div class="avatar-large">A</div>
+                            <div class="user-info">
+                                <h3 id="nomeLoginBarra">Olá, <%= usuario.nome %></h3>
+                                <p><%= usuario.perfil %></p>
+                           </div>
+                        </div>
+
+                        <div class="sidebar-divider"></div>
+
+                        <h3 class="ttl-favoritos"> Favoritos </h3>
+
+                        <div class="cards-container" id="favoritosContainer" ></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>      

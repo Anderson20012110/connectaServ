@@ -1,0 +1,146 @@
+.navbar {
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-container img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    border-right: 1px solid var(--color-border);
+    padding-right: 20px;
+}
+
+.nav-icons a {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.nav-icons a:hover {
+    color: var(--color-primary);
+}
+
+/* Bolinha vermelha de notificação no ícone */
+.nav-icons a .badge {
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: #ef4444;
+    border-radius: 50%;
+}
+
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-text {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.btn-solid {
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: var(--bg-white);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-solid:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    & .imgLogin {
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        border: 2px solid var(--color-border);
+        cursor: pointer;
+    }
+
+    & h4 {
+        color: var(--text-gray);
+        font-weight: 200;
+        font-size: 14px;
+        cursor: default;
+    }
+}
+
+
+
+/* Menu lateral */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -360px;
+
+    width: 300px;
+    height: 100vh;
+
+    background: white;
+
+    box-shadow: -3px 0px 10px rgba(0,0,0,.2);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+
+    transition: .3s;
+    z-index: 999;
+}
+
+.menu-lateral.ativo {
+    right: 0;
+}
+
