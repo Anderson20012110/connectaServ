@@ -1,0 +1,277 @@
+/* --- Painel Esquerdo  --- */
+.container {
+    display: flex;
+    height: 100dvh;
+
+    & .left-panel {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-blue) 40%, var(--color-green) 100%);
+        color: var(--bg-white);
+        padding: 40px;
+
+    }
+
+    & .left-content {
+        max-width: 450px;
+        text-align: center;
+
+        & h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        & p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+    }
+
+    & .stats-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    & .stat-item h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    & .stat-item span {
+        font-size: 0.75rem;
+        opacity: 0.8;
+        text-transform: capitalize;
+    }
+
+    & .divider-vertical {
+        width: 1px;
+        height: 40px;
+        background-color: var(--color-border);
+    }
+
+
+    /* --- Painel Direito (Formulário) --- */
+    & .right-panel {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    & .login-card {
+        background-color: var(--bg-white);
+        padding: 50px 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+        width: 100%;
+        max-width: 450px;
+
+        & .login-card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & img {
+            height: 50px;
+            margin-bottom: 30px;
+        }
+
+        & h2 {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+    }
+
+    /* Campos do Formulário */
+    & .input-group {
+        margin-bottom: 20px;
+
+        & label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+    }
+
+
+    & .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        & i.left-icon {
+            position: absolute;
+            left: 15px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        & i.right-icon {
+            position: absolute;
+            right: 15px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        & input {
+            width: 100%;
+            padding: 12px 15px 12px 40px;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s;
+            color: var(--text);
+        }
+
+        & input:focus {
+            border-color: var(--color-blue);
+            box-shadow: 0 0 0 3px rgba(92, 103, 242, 0.1);
+        }
+
+        & input::placeholder {
+            color: var(--text-gray);
+        }
+    }
+
+
+
+    /* Botão Principal */
+    & .btn-primary {
+        width: 100%;
+        padding: 12px;
+        background-color: var(--color-blue);
+        color: var(--bg-white);
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.3s;
+    }
+
+    /* Links adicionais */
+    .auth-links {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: var(--text-gray);
+
+        & a {
+            color: var(--color-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        & a:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+    & .forgot-password {
+        display: block;
+        margin-top: 15px;
+    }
+
+    /* Divisor Social */
+    & .social-divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 30px 0 20px;
+        color: var(--text-gray);
+        font-size: 0.8rem;
+
+        &::before,
+        &::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        &:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        &:not(:empty)::after {
+            margin-left: .25em;
+        }
+    }
+
+
+    /* Botões Sociais */
+    & .social-login {
+        display: flex;
+        gap: 15px;
+
+        & .btn-social {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            gap: 10px;
+            height: 40px;
+            width: 100px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+            border: 1px solid var(--color-border);
+            transition: background 0.3s;
+
+            & img {
+                margin-top: 30px;
+                width: 18px;
+                height: 18px;
+            }
+
+            & i {
+                font-size: 18px;
+                color: var(--color-blue);
+            }
+
+            &:hover {
+                background-color: #f9fafb;
+            }
+        }
+    }
+
+    /* Responsividade (Para dispositivos móveis) */
+    @media (max-width: 900px) {
+        body {
+            flex-direction: column;
+        }
+
+        .left-panel {
+            display: none;
+        }
+
+        .right-panel {
+            padding: 15px;
+        }
+
+        .login-card {
+            padding: 30px 20px;
+        }
+    }
+}
