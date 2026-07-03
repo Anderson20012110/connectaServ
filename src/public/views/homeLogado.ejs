@@ -1,0 +1,158 @@
+    <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links Css -->
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/navBar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+
+    <!-- Link Js -->
+    <script src="/scripts/homeSearch.js" defer></script>
+
+    <!-- CDN font-awesome e Google Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>ConnectaServ</title>
+
+</head>
+
+<body>
+    <section class="container">
+    
+            <% if (usuario && usuario.perfil === 'cliente') { %>
+                <%- include('partials/headerCliente') %>
+            <% } else if (usuario && usuario.perfil === 'prestador') { %>
+                <%- include('partials/headerColaborador') %>
+            <% } else { %>
+                <p><a href="/login">Por favor, faça login para acessar.</a></p>
+            <% } %>
+
+
+
+        <section class="hero-section">
+            <div class="hero-container">
+                <h1>Encontre o profissional certo,<br>perto de você.</h1>
+                <p>Conectamos você aos melhores prestadores de serviço da sua região.<br>Rápido, seguro e sem
+                    complicações.
+                </p>
+
+                <div class="search-bar">
+                    <div class="search-input-group flex-2">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="homeBuscaInput" placeholder="O que você precisa hoje?">
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-input-group flex-1">
+                        <div class="box-serach-endereco">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p id="txt-end">Localizando...</p>
+                        </div>
+                    </div>
+                    <button class="btn-search" id="btnBuscarHome">Buscar</button>  
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="box">
+                <div class="section-header">
+                    <div>
+                        <h2>Categorias Populares</h2>
+                        <p>Navegue pelos serviços mais buscados</p>
+                    </div>
+                    <a href="#" class="view-all">Ver todas <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="categories-grid">
+                    <div class="category-card" data-categoria="reformas" style="cursor: pointer;">
+                        <div class="cat-icon bg-blue-light">
+                            <i class="fa-solid fa-wrench text-blue"></i>
+                        </div>
+                        <span>Reformas</span>
+                    </div>
+                    <div class="category-card" data-categoria="eletrica" style="cursor: pointer;">
+                        <div class="cat-icon bg-yellow-light">
+                            <i class="fa-solid fa-bolt text-yellow"></i>
+                        </div>
+                        <span>Elétrica</span>
+                    </div>
+                    <div class="category-card" data-categoria="beleza" style="cursor: pointer;">
+                        <div class="cat-icon bg-pink-light">
+                            <i class="fa-solid fa-scissors text-pink"></i>
+                        </div>
+                        <span>Beleza</span>
+                    </div>
+                    <div class="category-card" data-categoria="aulas" style="cursor: pointer;">
+                        <div class="cat-icon bg-purple-light">
+                            <i class="fa-solid fa-book-open text-purple"></i>
+                        </div>
+                        <span>Aulas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="professionals-section">
+            <div class="box">
+                <div class="section-header">
+                    <div>
+                        <h2>Profissionais perto de você</h2>
+                        <p>Encontre os melhores talentos na sua região</p>
+                    </div>
+                </div>
+
+                <div class="professionals-grid">
+
+                    <% prestadores.forEach(prestador => { %>
+                        <% let jaFavoritado = typeof favoritosIds !== 'undefined' && favoritosIds.includes(prestador.id); %>
+                        <div class="pro-card" data-prestador-id="<%= prestador.id %>" onclick="if(!event.target.closest('.btn-favorite')) window.location.href='/perfil/<%= prestador.id %>'" style="cursor: pointer;">
+
+                            <div class="pro-image-wrapper">
+                                <img src="<%= resolverImagem(prestador.foto_perfil) %>" alt="<%= prestador.Usuario ? prestador.Usuario.nome : 'Usuário' %>" class="pro-image" style="width: 100%; height: 100%; object-fit: cover;">
+                                <button class="btn-favorite <%= jaFavoritado ? 'favoritado' : '' %>" data-prestador-id="<%= prestador.id %>">
+                                    <i class="fa-<%= jaFavoritado ? 'solid' : 'regular' %> fa-heart"></i>
+                                </button>
+                            </div>
+                        
+                            <div class="pro-info">
+                                <div class="pro-header">
+                                    <h3> <%= prestador.Usuario ? prestador.Usuario.nome : 'Nome Indisponível' %> </h3>
+                                    <div class="pro-rating"> <i class="fa-solid fa-star"></i> 5.0 </div>
+                                </div>
+                            
+                                <p class="pro-category"> <%= prestador.cargo || 'Cargo não definido' %> </p>
+                            
+                                <div class="pro-meta">
+                                    <span> <i class="fa-solid fa-map-pin"></i> <%= prestador.cidade || 'Cidade' %> - <%= prestador.estado || 'UF' %> </span>
+                                </div>
+                            
+                                <div class="pro-footer">
+                                    <strong> R$ <%= prestador.preco_base || '0.00' %> </strong>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="box text-center">
+                <h2>É um profissional autônomo?</h2>
+                <p>Junte-se a milhares de profissionais que estão aumentando sua renda com a ConectaServ. Cadastro 100%
+                    gratuito.</p>
+                <button class="btn-white">Quero oferecer meus serviços</button>
+            </div>
+        </section>
+
+        <%- include ('./partials/footer') %>
+    </section>
+</body>
+
+</html>

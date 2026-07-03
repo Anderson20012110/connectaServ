@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links Css -->
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/global.css">
+
+    <!-- Links Js-->
+    <script src="../scripts/visualisacaoSenha.js" defer></script>
+
+    <!-- CDN font-awesome e Google Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Login</title>
+
+</head>
+
+<body>
+
+    <section class="container">
+
+        <!-- Painel de informação esquerdo -->
+        <div class="left-panel">
+            <div class="left-content">
+                <h1>Conecte-se aos melhores profissionais da sua região</h1>
+                <p>Milhares de prestadores de serviços qualificados prontos para ajudar você</p>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <h3>10k+</h3>
+                        <span>Profissionais</span>
+                    </div>
+                    <div class="divider-vertical"></div>
+                    <div class="stat-item">
+                        <h3>50k+</h3>
+                        <span>Serviços</span>
+                    </div>
+                    <div class="divider-vertical"></div>
+                    <div class="stat-item">
+                        <h3>4.9</h3>
+                        <span>Avaliação</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel de login direito -->
+        <div class="right-panel">
+            <div class="login-card">
+                <div class="login-card-content">
+                    <a href="/">
+                        <img src="img/image.png" alt="Logo">
+                    </a>
+                    <h2>Bem-vindo de volta</h2>
+                </div>
+
+                <form action="/login" method="POST">
+                    <div class="input-group">
+                        <label>E-mail</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-envelope left-icon"></i>
+                            <input type="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Senha</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-lock left-icon"></i>
+                            <input type="password" id="senha" name="senha" placeholder="••••••••" required>
+                            <i class="fa-regular fa-eye-slash right-icon" id="toggleSenha"></i>
+                        </div>
+                    </div>
+
+                    <% if (typeof loginErrado !== 'undefined' && loginErrado) { %>
+                        <%- include('partials/erroEmail') %>
+                    <% } %>
+                    
+                    <% if (typeof senhaErrada !== 'undefined' && senhaErrada) { %>
+                        <%- include('partials/erroSenha') %>
+                    <% } %>
+
+                    <button type="submit" class="btn-primary">Entrar na plataforma</button>
+                </form>
+
+                <div class="auth-links">
+                    Não tem uma conta? <a href="/cadastro">Cadastre-se grátis</a>
+                    <a href="#" class="forgot-password">Esqueci minha senha</a>
+                </div>
+
+                <div class="social-divider">Ou continue com</div>
+
+                <div class="social-login">
+                    <button type="button" class="btn-social">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google">
+                        Google
+                    </button>
+                    <button type="button" class="btn-social">
+                        <i class="fa-brands fa-facebook"></i>
+                        Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
